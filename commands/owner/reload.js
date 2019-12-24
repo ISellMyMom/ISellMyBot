@@ -1,4 +1,4 @@
-const { ownerid } = require("./data/config.json");
+const { ownerid } = require("../../data/config.json");
 module.exports = {
     config: {
         name: "reload",
