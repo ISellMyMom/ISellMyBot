@@ -7,11 +7,11 @@ const { cyan } = require("../../data/colours.json")
 module.exports = {
     config: {
         name: "help",
-        aliases: ["h", "halp", "commands"],
-        usage: "command",
+        aliases: ["ajutor", "comenzi", "commands"],
+        usage: "comanda",
         category: "miscellaneous",
-        description: "Displays all commands that the bot has.",
-        accessableby: "Members"
+        description: "Afiseaza lista cu comenzile care sunt puse la dispozitie de catre bot.",
+        accessableby: "Membru"
     },
     run: async (bot, message, args) => {
         const embed = new RichEmbed()
@@ -41,12 +41,12 @@ module.exports = {
             if(!command) return message.channel.send(embed.setTitle("Invalid Command.").setDescription(`Do \`${prefix}help\` for the list of the commands.`))
             command = command.config
 
-            embed.setDescription(stripIndents`The bot's prefix is: \`${prefix}\`\n
-            **Command:** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}
-            **Description:** ${command.description || "No Description provided."}
-            **Usage:** ${command.usage ? `\`${prefix}${command.name} ${command.usage}\`` : "No Usage"}
-            **Accessible by:** ${command.accessableby || "Members"}
-            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`)
+            embed.setDescription(stripIndents`Prefixul botului este: \`${prefix}\`\n
+            **Comanda:** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}
+            **Descriere:** ${command.description || "No Description provided."}
+            **Utilizare:** ${command.usage ? `\`${prefix}${command.name} ${command.usage}\`` : "Nimic"}
+            **Accesibiltate:** ${command.accessableby || "Membru"}
+            **Alias:** ${command.aliases ? command.aliases.join(", ") : "Nimic"}`)
 
             return message.channel.send(embed)
         }
