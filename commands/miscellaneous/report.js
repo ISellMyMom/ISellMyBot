@@ -4,7 +4,9 @@ module.exports = {
         name: "report",
         description: "Raporteaza un membru pentru ca e hacherman.",
         usage: "utilizator motiv",
+        category: "miscellaneous",
         accessableby: "Membru",
+        aliases: [""]
     },
     run: async (bot, message, args) => {
 
