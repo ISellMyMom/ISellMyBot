@@ -3,6 +3,7 @@ module.exports = async bot => {
 
     let statuses = [
         "porn",
+        "from bunker",
         "!help",
         `over ${bot.users.size} users!`
     ]
