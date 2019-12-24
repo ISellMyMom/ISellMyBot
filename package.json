@@ -1,0 +1,16 @@
+{
+  "name": "isellmybot",
+  "version": "1.0.0",
+  "description": "A optimal bot for discord",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hazze",
+  "license": "ISC",
+  "dependencies": {
+    "common-tags": "^1.8.0",
+    "discord.js": "^11.5.1",
+    "node-fetch": "^2.6.0"
+  }
+}
