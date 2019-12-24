@@ -25,7 +25,7 @@ module.exports = {
         // send to reports channel and add tick or cross
 
         message.channel.send("Multumesc ca ai raportat acest utilizator.").then(m => m.delete(15000))
-        sChannel.send(`**${message.author.tag}** l-a raportat pe **${target.user.tag}** pentru **${reason}**.`).then(async msg => {
+        sChannel.send("``" + message.author.tag + "`` l-a raportat pe ``" + target.user.tag + "`` pentru ``" + reason + "``."`).then(async msg => {
             await msg.react("✅")
             await msg.react("❌")
         })
