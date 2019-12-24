@@ -4,7 +4,7 @@ module.exports = {
         description: "sends a message that was inputted to a channel",
         usage: "#channel text",
         category: "moderation",
-        accessableby: "Staff",
+        accessableby: "Moderator",
         aliases: ["acc", "announcement"]
     },
     run: async (bot, message, args) => {
