@@ -32,7 +32,7 @@ module.exports = {
     .setColor(redlight)
     .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL)
     .addField("Moderation:", "kick")
-    .addField("Mutee:", kickMember.user.username)
+    .addField("Member:", kickMember.user.username)
     .addField("Moderator:", message.author.username)
     .addField("Reason:", reason)
     .addField("Date:", message.createdAt.toLocaleString())
