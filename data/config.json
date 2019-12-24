@@ -1,6 +1,6 @@
 {
 	"token": "secret",
-	"prefix": "!",
+	"prefix": "?",
 	"log_channel": "verificare",
 	"ownerid": "422408402849890304"
 }
