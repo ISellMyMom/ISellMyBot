@@ -1,8 +1,8 @@
 {
 	"token": "secret",
-	"prefixes" : [
-		"?",
-		"? ",
+	"prefixes" : [ 
+		"?", 
+		"? ", 
 		"@<658796720213196810> "
 	],
 	"log_channel": "log",
