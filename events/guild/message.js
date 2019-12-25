@@ -4,7 +4,7 @@ module.exports = async (bot, message) => {
 
 
 
-  const prefixes = ['!', '?', '/'];
+  const prefixes = ['? ', '?', 'sir pls '];
   let prefix = false;
   for(const thisPrefix of prefixes) {
     if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
