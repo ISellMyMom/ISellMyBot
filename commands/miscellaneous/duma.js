@@ -6,7 +6,7 @@ module.exports = {
         description: "Iti dau o duma.",
         usage: "",
         category: "miscellaneous",
-        accessableby: "Members",
+        accessableby: "Membru",
         aliases: ["dume"]
     },
     run: async (bot, message, args) => {
