@@ -1,6 +1,6 @@
 const { RichEmbed } = require("discord.js")
 const { redlight } = require("../../data/colours.json");
-const { log_channel } = require("../../data/config.json");
+const { channel } = require("../../data/config.json");
 
 module.exports = {
     config: {
@@ -37,7 +37,7 @@ module.exports = {
     .addField("Reason:", reason)
     .addField("Date:", message.createdAt.toLocaleString())
     
-        let sChannel = message.guild.channels.find(c => c.name === log_channel)
+        let sChannel = message.guild.channels.find(c => c.name === channel.log)
         sChannel.send(embed)
     }
 }
