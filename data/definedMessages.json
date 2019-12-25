@@ -1,4 +1,9 @@
 {
+  "error" : {
+    "permission" : "Nu ai permisiunile necesare pentru a utiliza aceasta comanda.",
+    "time" : "Timpul a expirat."
+    
+  }
   "welcome" : [
     "a aterizat aici, să-i urăm bun venit.",
     "a fost târâz aici, ghinion.",
@@ -9,5 +14,17 @@
     "a venit însfârşit.",
     "a venit să facă prăpăd, eeee nenorocire.",
     "este acum un membru oficial."
+  ],
+  "coin" : [
+    "cap",
+    "pajura"
+  ],
+  "dice" : [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
   ]
 }
