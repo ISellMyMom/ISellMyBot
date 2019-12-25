@@ -1,4 +1,4 @@
-const { report_channel } = require("../../data/config.json");
+const { channel.report } = require("../../data/config.json");
 module.exports = { 
     config: {
         name: "report",
@@ -20,7 +20,7 @@ module.exports = {
         if(!reason) return message.channel.send(`Scrie si motivul pentru care il raportezi pe **${target.user.tag}**`).then(m => m.delete(15000))
 
         // grab reports channel
-        let sChannel = message.guild.channels.find(x => x.name === report_channel)
+        let sChannel = message.guild.channels.find(x => x.name === channel.report)
 
         // send to reports channel and add tick or cross
 
