@@ -25,7 +25,6 @@ module.exports = {
       //if(!newbiechannel) return message.channel.send("Canalul pentru începători nu există.");
       let msg1 = await newbiechannel.send(NewBie);
       msg1.react(agree);
-      console.log("Am trecut de regulament");
 
       const filter = (reaction, user) => {
           return [agree].includes(reaction.emoji.name) && user.id === message.author.id;
@@ -58,12 +57,12 @@ module.exports = {
         const DSS = message.guild.roles.get('646724700927557642'); // FACULTATEA: DREPT SI STIINTE SOCIALE
 
         const TO = message.guild.roles.get('646723322297450536'); // FACULTATEA: TEOLOGIE ORTODOXA
-        console.log("Am definit constantele");
+
         if(message.member.roles.has(IF.id) || message.member.roles.has(SE.id) || message.member.roles.has(SEI.id) || message.member.roles.has(DSS.id) || message.member.roles.has(TO.id)){
         return message.channel.send('Ai deja un rol, daca vrei sa-l schimbi, contacteaza un membru staff!').then(m => m.delete(3000));
       }
         const filter = (reaction, user) => ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳','❌'].includes(reaction.emoji.name) && user.id === message.author.id;
-        console.log("Inainte de embed");
+
       const embed = new RichEmbed()
         .setTitle('Alege domeniul facultatii tale:')
         .addField(`Isorie si Filologie`, `
@@ -115,7 +114,7 @@ module.exports = {
             `)*/
             .setColor(0xdd9323)
             .setFooter(`ID: ${message.author.id}`);
-              console.log("Dupa embed");
+
       newbiechannel.send(embed).then(async msg => {
 
             await msg.react('🇦');//a
