@@ -1,7 +1,15 @@
-const { prefix } = require("../../data/config.json");
 
 module.exports = async (bot, message) => { 
     if(message.author.bot || message.channel.type === "dm") return;
+
+
+
+  const prefixes = ['!', '?', '/'];
+  let prefix = false;
+  for(const thisPrefix of prefixes) {
+    if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
+  }
+  if(!prefix) return;
 
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
