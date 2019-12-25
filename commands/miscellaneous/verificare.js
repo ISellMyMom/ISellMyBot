@@ -63,7 +63,7 @@ module.exports = {
         return message.channel.send('Ai deja un rol, daca vrei sa-l schimbi, contacteaza un membru staff!').then(m => m.delete(3000));
       }
         const filter = (reaction, user) => ['🇦', '🇧', '🇨', '🇩'/*d*/, '🇪', '🇫', '🇬', '🇭', '🇮', '🇯'/*j*/, '🇰', '🇱', '🇲', '🇳'/*n*/,'❌'/*x*/].includes(reaction.emoji.name) && user.id === message.author.id;
-
+/*
       const embed = new RichEmbed()
         .setTitle('Alege domeniul facultatii tale:')
         .addField(`Isorie si Filologie`, `
@@ -87,7 +87,7 @@ module.exports = {
         n - ${TO.toString()}`, true)
         .addField(`Nu sunt la facultate`, `
         X - Anuleaza`, true)
-           /* .setDescription(`
+            .setDescription(`
             Istorie si Filologie:
             A - ${a.toString()}
             B - ${b.toString()}
@@ -112,7 +112,7 @@ module.exports = {
         Teologie Ortodoxa:
         N - ${TO.toString()}
 
-            `)*/
+            `)
             .setColor(0xdd9323)
             .setFooter(`ID: ${message.author.id}`);
       newbiechannel.send(embed).then(async msg => {
