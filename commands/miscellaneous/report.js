@@ -1,4 +1,4 @@
-const { channel.report } = require("../../data/config.json");
+const { channel } = require("../../data/config.json");
 module.exports = { 
     config: {
         name: "report",
