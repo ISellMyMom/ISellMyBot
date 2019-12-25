@@ -4,7 +4,7 @@ module.exports = async (bot, message) => {
 
 
 
-    const prefixes = ['? ', '?', '<@`${client.user.id}`> ', 'sir '];
+    const prefixes = ['? ', '?', '@FoarteBine ', 'sir '];
     let prefix = false;
     for(const thisPrefix of prefixes) {
         if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
