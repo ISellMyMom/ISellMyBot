@@ -5,7 +5,10 @@
 		"? ", 
 		"@<658796720213196810> "
 	],
-	"log_channel": "log",
-	"report_channel": "log",
+	"channel" : {
+		"log" : "log",
+		"report" : "reports",
+		"newbie" : "verificare"
+	},
 	"ownerid": "422408402849890304"
 }
