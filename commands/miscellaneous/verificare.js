@@ -1,6 +1,7 @@
 
 const agree = "✅";
 const { channel } = require("../../data/config.json");
+const { defined } = require("../../data/definedMessages.json");
 const { RichEmbed } = require('discord.js');
 
 module.exports = {
@@ -141,18 +142,7 @@ module.exports = {
                 time: 10000,
                 errors: ['time']
             }).then(collected => {
-          const Welcome = [
-            "a aterizat aici, să-i urăm bun venit.",
-            "a fost târâz aici, ghinion.",
-            "tocmai a trecut de verificare, nu e prost.",
-            "iţi urăm ok.",
-            "face bine, mai vedem.",
-            "face acum parte din clanu' curentaţilor.",
-            "a venit însfârşit.",
-            "a venit să facă prăpăd, eeee nenorocire.",
-            "este acum un membru oficial."
-          ];
-          let WelcomeMessage = Welcome[Math.floor(Math.random()*Welcome.length)];
+          let WelcomeMessage = defined.welcome[Math.floor(Math.random()*defined.welcome.length)];
                 const reaction = collected.first();
                 switch (reaction.emoji.name) {
             case '🇦'://a
