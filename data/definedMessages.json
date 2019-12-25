@@ -1,9 +1,8 @@
 {
   "error" : {
     "permission" : "Nu ai permisiunile necesare pentru a utiliza aceasta comanda.",
-    "time" : "Timpul a expirat."
-    
-  }
+    "time" : "Timpul a expirat."   
+  },
   "welcome" : [
     "a aterizat aici, să-i urăm bun venit.",
     "a fost târâz aici, ghinion.",
@@ -19,12 +18,5 @@
     "cap",
     "pajura"
   ],
-  "dice" : [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6"
-  ]
+  "dice" : ["1", "2", "3", "4", "5", "6"]
 }
