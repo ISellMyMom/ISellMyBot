@@ -1,7 +1,7 @@
 
 const agree = "✅";
 const { channel } = require("../../data/config.json");
-const { defined } = require("../../data/definedMessages.json");
+const { welcome } = require("../../data/definedMessages.json");
 const { RichEmbed } = require('discord.js');
 
 module.exports = {
@@ -142,7 +142,7 @@ module.exports = {
                 time: 10000,
                 errors: ['time']
             }).then(collected => {
-          let WelcomeMessage = defined.welcome[Math.floor(Math.random()*defined.welcome.length)];
+          let WelcomeMessage = welcome[Math.floor(Math.random()*welcome.length)];
                 const reaction = collected.first();
                 switch (reaction.emoji.name) {
             case '🇦'://a
