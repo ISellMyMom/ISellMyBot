@@ -86,7 +86,7 @@ module.exports = {
         n - ${TO.toString()}`, true)
         .addField(`Nu sunt la facultate`, `
         X - Anuleaza`, true)
-            .setDescription(`
+            /*.setDescription(`
             Istorie si Filologie:
             A - ${a.toString()}
             B - ${b.toString()}
@@ -111,7 +111,7 @@ module.exports = {
         Teologie Ortodoxa:
         N - ${TO.toString()}
 
-            `)
+            `)*/
             .setColor(0xdd9323)
             .setFooter(`ID: ${message.author.id}`);
       newbiechannel.send(embed).then(async msg => {
