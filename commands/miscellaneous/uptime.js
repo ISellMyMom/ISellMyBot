@@ -1,10 +1,10 @@
 module.exports = {
     config: {
         name: "uptime",
-        description: "Displays the bots current uptime!",
+        description: "Afișează cât timp a fost online botul.",
         usage: "",
         category: "miscellaneous",
-        accessableby: "Members",
+        accessableby: "Membru",
         aliases: ["ut"]
     },
     run: async (bot, message, args) => {
