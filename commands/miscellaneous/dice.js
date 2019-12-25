@@ -11,6 +11,6 @@ module.exports = {
     },
     run: async (bot, message, args) => {
 		var xdice = dice[Math.floor(Math.random() * dice.length)];
-		message.channel.send(xdice);
+		message.channel.reply("a aruncat: " + xdice);
     }
 }
