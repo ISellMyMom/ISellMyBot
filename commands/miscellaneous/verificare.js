@@ -62,7 +62,7 @@ module.exports = {
       if(message.member.roles.has(IF.id) || message.member.roles.has(SE.id) || message.member.roles.has(SEI.id) || message.member.roles.has(DSS.id) || message.member.roles.has(TO.id)){
         return message.channel.send('Ai deja un rol, daca vrei sa-l schimbi, contacteaza un membru staff!').then(m => m.delete(3000));
       }
-        const filter = (reaction, user) => ['🇦', '🇧', '🇨', '🇩'/*d*/, '🇪', '🇫', '🇬', '🇭', '🇮', '🇯'/*j*/, '🇰', '🇱', '🇲', '🇳'/*n*/,'❌'/*x*/].includes(reaction.emoji.name) && user.id === message.author.id;
+        const filter = (reaction, user) => ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳','❌'].includes(reaction.emoji.name) && user.id === message.author.id;
 /*
       const embed = new RichEmbed()
         .setTitle('Alege domeniul facultatii tale:')
