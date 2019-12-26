@@ -1,10 +1,10 @@
-const { prefixes } = require("../../data/config.json");
+//const { prefixes } = require("../../data/config.json");
 module.exports = async (bot, message) => { 
     if(message.author.bot || message.channel.type === "dm") return;
 
 
 
-    //const prefixes = ['? ', '?', `<@!${bot.user.id}> `, 'sir '];
+    const prefixes = ['? ', '?', `<@!${bot.user.id}> `, 'sir '];
     let prefix = false;
     for(const thisPrefix of prefixes) {
         if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
