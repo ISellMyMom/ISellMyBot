@@ -6,9 +6,12 @@
 		"@<658796720213196810> "
 	],
 	"channel" : {
-		"log" : "log",
-		"report" : "reports",
-		"newbie" : "verificare"
+		"newbie" : "verificare",
+                "report" : "⚠️reports",
+                "messageslog" : "📝messages",
+                "mutelog" : "🔈mute",
+                "kicklog" : "💨kick",
+                "banlog" : "💀ban"
 	},
 	"ownerid": "422408402849890304"
 }
