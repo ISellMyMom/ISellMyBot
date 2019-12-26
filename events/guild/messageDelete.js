@@ -3,5 +3,5 @@ module.exports = async (bot, message) => {
         if(message.content.includes("clear")) return;
 	if(message.channel.name ==  channel.newbie) return;
 
-	bot.channels.find('name', channel.messageslog).send("Mesajul ``" + message.content + "`` din ``#" + message.channel.name + "`` trimis de ``" + message.author.tag + "`` a fost sters.");
+	bot.channels.find(x => x.name === channel.messageslog).send("Mesajul ``" + message.content + "`` din ``#" + message.channel.name + "`` trimis de ``" + message.author.tag + "`` a fost sters.");
 }
