@@ -25,8 +25,8 @@ module.exports = {
     }
     clear();
     let sChannel = message.guild.channels.find(c => c.name === channel.messageslog);
-    sChannel.send("Au fost șterse ``" + args[1] + "`` mesaje din canalul ``" + message.channel.name` + "``.");
-
+    //sChannel.send("Au fost șterse ``" + args[1] + "`` mesaje din canalul ``" + message.channel.name` + "``.");
+    sChannel.send("Merge");
 
     }
 }
