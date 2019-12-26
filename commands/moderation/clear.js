@@ -1,3 +1,4 @@
+const { error } = require("../../data/definedMessages.json")
 module.exports = {
     config: {
         name: "clear",
@@ -9,7 +10,7 @@ module.exports = {
     },
     run: async (bot, message, args) => {
 
-    if(!message.member.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])) return message.channel.send("Nu poți folosi aceasta comanda!")
+    if(!message.member.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])) return message.channel.send(error.permission)
     
     const deleteCount = parseInt(args[0], 10);
     async function clear() {       
