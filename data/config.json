@@ -7,7 +7,7 @@
 	],
 	"channel" : {
 		"newbie" : "verificare",
-                "report" : "⚠️reports",
+                "report" : "🔖reports",
                 "messageslog" : "📝messages",
                 "mutelog" : "🔈mute",
                 "kicklog" : "💨kick",
