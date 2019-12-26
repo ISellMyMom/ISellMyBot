@@ -1,4 +1,5 @@
-const { error } = require("../../data/definedMessages.json")
+const { error } = require("../../data/definedMessages.json");
+const { channel } = require("../../data/config.json");
 module.exports = {
     config: {
         name: "clear",
@@ -23,6 +24,8 @@ module.exports = {
           message.channel.bulkDelete(fetched).catch(error => message.reply(`Eroare: ${error}`));
     }
     clear();
+    let sChannel = message.guild.channels.find(c => c.name === channel.messageslog)
+    sChannel.send("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name` + "``.")
 
 
     }
