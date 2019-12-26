@@ -6,8 +6,8 @@ const { error } = require("../../data/definedMessages.json");
 module.exports = {
     config: {
         name: "ban",
-        description: "Bans a user from the guild!",
-        usage: "!ban",
+        description: "Banează un user pentru o zi.",
+        usage: "@utilizator motiv",
         category: "moderation",
         accessableby: "Administrators",
         aliases: ["b", "pika", "remove"]
