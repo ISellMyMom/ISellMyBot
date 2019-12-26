@@ -14,7 +14,7 @@ module.exports = {
     },
     run: async (bot, message, args) => {
 
-   if(!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("You do not have permission to perform this command!")
+   if(!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(error.permission)
 
    let banMember = message.mentions.members.first() || message.guild.members.get(args[0]) 
    if(!banMember) return message.channel.send("Please provide a user to ban!")
