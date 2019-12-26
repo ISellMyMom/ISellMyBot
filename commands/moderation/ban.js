@@ -31,13 +31,13 @@ module.exports = {
 
     let embed = new RichEmbed()
     .setColor(redlight)
-    .setAuthor("Banlog" , bot.user.avatarURL)
+    .setAuthor("Ban" , bot.user.avatarURL)
     .addField("Membru:", banMember.user.username)
     .addField("Executor:", message.author.username)
     .addField("Motiv:", reason)
     .setThumbnail("http://icons.iconarchive.com/icons/graphicloads/polygon/128/sound-icon.png")
-
-    .setFooter("Data:", message.createdAt.toLocaleString())
+    .setTimestamp()
+    .setFooter("LSUA Logs")
     
         let sChannel = message.guild.channels.find(c => c.name === channel.banlog)
         sChannel.send(embed)
