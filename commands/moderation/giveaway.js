@@ -1,4 +1,4 @@
-const g_channel_id = ''; // This should be a String and the channel ID of the giveaways channel
+const g_channel_id = '659688758542860308'; // This should be a String and the channel ID of the giveaways channel
 const g_message_id = ''; // This should be a String and the message ID of the givaway message
 const winner_amount = ''; // This shiuld be a Number and it represents how many winners you wish to choose
 
