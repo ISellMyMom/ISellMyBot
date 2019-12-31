@@ -15,7 +15,7 @@ module.exports = {
     const winner_amount = ''; // This shiuld be a Number and it represents how many winners you wish to choose
 
     let c = message.guild.channels.find(c => c.name === 'giveaways');
-    let m = await c.fetchMessage(MESSAGE_ID);
+    let m = await ch.fetchMessage(MESSAGE_ID);
     let reactions = m.reactions;
     let reaction = reactions.first(); // This reaction would normally be the reaction a user would use to enter the giveawahy
     let users = reaction.users.map(u => u.toString());
