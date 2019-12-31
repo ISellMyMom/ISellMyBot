@@ -21,11 +21,6 @@ module.exports = {
     let users = reaction.users.map(u => u.toString());
     return message.channel.send(`**${users.random()}** has won the giveaway!`); // this uses the Array.prototpe.random method below
   
-    const ch = message.guild.channels.get(g_channel_id);
-    const m = await c.fetchMessage(g_message_id);
-    const reactions = m.reactions;
-    const reaction = reactions.first(); // This reaction would normally be the reaction a user would use to enter the giveaway
-    const users = reaction.users.map(u => u.toString());
     if (winner_amount == 1) {
     	return c.send(`**${users.random()}** has won the giveaway!`); // this uses the Array.prototpe.random method below
     } else {
