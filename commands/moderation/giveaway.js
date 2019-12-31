@@ -33,6 +33,7 @@ module.exports = {
     	return ch.send(`**${winners}** have won the giveaway!`);
     }
 }
+}
 Array.prototype.random = function () {
   return this[Math.floor(Math.random() * this.length)];
 };
@@ -45,5 +46,3 @@ Array.prototype.randomAmount = function (array, length) => {
 
 	return arr;
 };
-    
-}
