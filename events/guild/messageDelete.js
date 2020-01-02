@@ -7,7 +7,7 @@ module.exports = async (bot, message) => {
         let sEmbed = new RichEmbed()
             .setColor(cream)
             .setTitle("Mesaj șters în #" + message.channel.name)
-            .addField("Mesaj:" , message.content)
+            .setDescription(message.content)
             .setFooter("Trimis de: " + message.author.tag);
             //.setDescription("Mesajul ``" + message.content + "`` din ``#" + message.channel.name + "`` a fost șters de ``" + message.author.tag + "``");
 
