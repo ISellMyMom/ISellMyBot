@@ -31,11 +31,6 @@ module.exports = {
    // guilds.get("id", logserver).channels.get("name", channel.messageslog).send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.")
 let guild = client.guilds.get(logserver), // returns a Guild or undefined
   channel; 
-
-    if (guild) {
-      chan = guild.channels.get(channel.messageslog);
+      let chan = guild.channels.get(channel.messageslog);
       if (chan) setInterval(() => {chan.send("Here you can put the message and stuffs.");}, 10 * 60 * 1000);
-      else console.log("There's no channel with that ID."),
-    } else console.log("There's no guild with that ID.");
-    }
 }
