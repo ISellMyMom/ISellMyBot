@@ -28,7 +28,7 @@ module.exports = {
     clear();
     let sEmbed = new RichEmbed()
         .setColor(red_light)
-        .setDescription("Au fost șterse " + deleteCount + " mesaje din canalul #" + message.channel.name + ".");
+        .setDescription("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``#" + message.channel.name + "``.");
 
 
     let sChannel = bot.channels.find(c => c.name === channel.messageslog);
