@@ -1,6 +1,6 @@
 const { error } = require("../../data/definedMessages.json");
 const { RichEmbed } = require ("discord.js");
-const { cream } = require ("../../data/colours.json");
+const { red_light } = require ("../../data/colours.json");
 const { channel } = require("../../data/config.json");
 module.exports = {
     config: {
@@ -27,8 +27,8 @@ module.exports = {
     }
     clear();
     let sEmbed = new RichEmbed()
-        .setColor(cream)
-        .addField("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name + "``.");
+        .setColor(red_light)
+        .setDescription("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name + "``.");
 
 
     let sChannel = bot.channels.find(c => c.name === channel.messageslog);
