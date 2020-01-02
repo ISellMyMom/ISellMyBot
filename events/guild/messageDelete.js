@@ -6,9 +6,9 @@ module.exports = async (bot, message) => {
 	if(message.channel.name ==  channel.newbie) return;
         let sEmbed = new RichEmbed()
             .setColor(cream)
-            .setTitle("#" + message.channel.name)
+            .setTitle("Mesaj șters în #" + message.channel.name)
             .addField("Mesaj:" , message.content)
-            .setFooter(message.author.tag);
+            .setFooter("Trimis de: " + message.author.tag);
             //.setDescription("Mesajul ``" + message.content + "`` din ``#" + message.channel.name + "`` a fost șters de ``" + message.author.tag + "``");
 
 	bot.channels.find(x => x.name === channel.messageslog).send(sEmbed);//("Mesajul ``" + message.content + "`` din ``#" + message.channel.name + "`` trimis de ``" + message.author.tag + "`` a fost sters.");
