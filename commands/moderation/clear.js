@@ -28,7 +28,14 @@ module.exports = {
     //sChannel.send("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name` + "``.");
     //sChannel.send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.");
 
-    guilds.get("id", logserver).channels.get("name", channel.messageslog).send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.")
+   // guilds.get("id", logserver).channels.get("name", channel.messageslog).send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.")
+let guild = client.guilds.get(logserver), // returns a Guild or undefined
+  channel; 
 
+if (guild) {
+  channel = guild.channels.get(channel.messageslog);
+  if (channel) setInterval(() => {channel.send("Here you can put the message and stuffs.");}, 10 * 60 * 1000);
+  else console.log("There's no channel with that ID."),
+} else console.log("There's no guild with that ID.");
     }
 }
