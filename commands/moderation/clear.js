@@ -32,10 +32,10 @@ module.exports = {
 let guild = client.guilds.get(logserver), // returns a Guild or undefined
   channel; 
 
-if (guild) {
-  channel = guild.channels.get(channel.messageslog);
-  if (channel) setInterval(() => {channel.send("Here you can put the message and stuffs.");}, 10 * 60 * 1000);
-  else console.log("There's no channel with that ID."),
-} else console.log("There's no guild with that ID.");
+    if (guild) {
+      chan = guild.channels.get(channel.messageslog);
+      if (chan) setInterval(() => {chan.send("Here you can put the message and stuffs.");}, 10 * 60 * 1000);
+      else console.log("There's no channel with that ID."),
+    } else console.log("There's no guild with that ID.");
     }
 }
