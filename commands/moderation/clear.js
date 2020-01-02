@@ -1,5 +1,5 @@
 const { error } = require("../../data/definedMessages.json");
-const { channel, logserver } = require("../../data/config.json");
+const { channel } = require("../../data/config.json");
 module.exports = {
     config: {
         name: "clear",
