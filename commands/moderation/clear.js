@@ -1,4 +1,6 @@
 const { error } = require("../../data/definedMessages.json");
+const { RichEmbed } = require ("discord.js");
+const { cream } = require ("../../data/colours.json");
 const { channel } = require("../../data/config.json");
 module.exports = {
     config: {
@@ -24,8 +26,16 @@ module.exports = {
           message.channel.bulkDelete(fetched).catch(error => message.reply(`Eroare: ${error}`));
     }
     clear();
+    let sEmbed = new RichEmbed()
+        .setColor(cream)
+        .addField("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name + "``.");
+
+
     let sChannel = bot.channels.find(c => c.name === channel.messageslog);
-    sChannel.send("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name + "``.");
-    //bot.channels.find(x => x.name === channel.messageslog).send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.");
+
+
+    //sChannel.send("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name + "``.");
+    sChannel.send(sEmbed);
+//bot.channels.find(x => x.name === channel.messageslog).send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.");
   }
 }
