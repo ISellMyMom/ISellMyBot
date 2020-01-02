@@ -1,5 +1,5 @@
 const { error } = require("../../data/definedMessages.json");
-const { channel } = require("../../data/config.json");
+const { channel, serverlog } = require("../../data/config.json");
 module.exports = {
     config: {
         name: "clear",
@@ -28,7 +28,7 @@ module.exports = {
     //sChannel.send("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name` + "``.");
     //sChannel.send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.");
 
-    bot.guilds.get(channel.logserver).channels.get(channel.messageslog).send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.")
+    bot.guilds.get(serverlog).channels.get(channel.messageslog).send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.")
 
     }
 }
