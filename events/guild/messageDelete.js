@@ -8,7 +8,7 @@ module.exports = async (bot, message) => {
             .setColor(cream)
             .setTitle("#" + message.channel.name)
             .addField("Mesaj:" , message.content)
-            .setFooter(message.author.id);
+            .setFooter(message.author.tag);
             //.setDescription("Mesajul ``" + message.content + "`` din ``#" + message.channel.name + "`` a fost șters de ``" + message.author.tag + "``");
 
 	bot.channels.find(x => x.name === channel.messageslog).send(sEmbed);//("Mesajul ``" + message.content + "`` din ``#" + message.channel.name + "`` trimis de ``" + message.author.tag + "`` a fost sters.");
