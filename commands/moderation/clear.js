@@ -26,11 +26,5 @@ module.exports = {
     clear();
     let sChannel = message.guild.channels.find(c => c.name === channel.messageslog);
     //sChannel.send("Au fost șterse ``" + deleteCount + "`` mesaje din canalul ``" + message.channel.name` + "``.");
-    //sChannel.send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.");
-
-   // guilds.get("id", logserver).channels.get("name", channel.messageslog).send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.")
-let guild = client.guilds.get(logserver), // returns a Guild or undefined
-  channel; 
-      let chan = guild.channels.get(channel.messageslog);
-      if (chan) setInterval(() => {chan.send("Here you can put the message and stuffs.");}, 10 * 60 * 1000);
+    sChannel.send("Au fost șterse ``" + deleteCount + " mesaje`` din canalul ``#" + message.channel.name +"``.");
 }
