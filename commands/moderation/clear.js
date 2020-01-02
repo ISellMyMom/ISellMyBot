@@ -1,6 +1,6 @@
 const { error } = require("../../data/definedMessages.json");
 const { RichEmbed } = require ("discord.js");
-const { red_light } = require ("../../data/colours.json");
+const { cream } = require ("../../data/colours.json");
 const { channel } = require("../../data/config.json");
 module.exports = {
     config: {
@@ -27,7 +27,7 @@ module.exports = {
     }
     clear();
     let sEmbed = new RichEmbed()
-        .setColor(red_light)
+        .setColor(cream)
         .setDescription("Am șters ``" + deleteCount + "`` mesaje din ``#" + message.channel.name + "``");
 
 
