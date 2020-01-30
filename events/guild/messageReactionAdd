@@ -1,0 +1,7 @@
+module.exports = async (reaction, user) => {
+   if(reaction.emoji.name === "✅") return;
+   if(user === bot.user) return;
+
+   let role = bot.guild.roles.find("name", "Verificat");
+   await user.addRole(role.id);
+}
