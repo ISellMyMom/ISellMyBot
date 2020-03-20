@@ -139,7 +139,7 @@ module.exports = {
 
             msg.awaitReactions(filter, {
                 max: 1,
-                time: 10000,
+                time: 30000,
                 errors: ['time']
             }).then(collected => {
           let WelcomeMessage = welcome[Math.floor(Math.random()*welcome.length)];
