@@ -5,7 +5,8 @@ module.exports = async bot => {
         "porn",
         "from bunker",
         "!help",
-        `over ${bot.users.size + 70} users!`
+        `over ${bot.users.size + 70} users!`,
+         `https://lsua.ro/`
     ]
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
