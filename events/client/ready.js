@@ -5,9 +5,8 @@ module.exports = async bot => {
         "porn",
         "from bunker",
         "!help",
-        `over ${bot.users.size} users!`
+        `over ${bot.users.size + 70} users!`
     ]
-
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity(status, {type: "WATCHING"});
