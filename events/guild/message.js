@@ -1,7 +1,9 @@
 const { prefixes } = require("../../data/config.json");
 module.exports = async (bot, message) => { 
     if(message.author.bot || message.channel.type === "dm") return;
-
+    if(message.channel.name == "verificare") {
+        message.delete();
+    }
 
 
     //const prefixes = ['? ', '?', `<@!${bot.user.id}> `, 'sir '];
