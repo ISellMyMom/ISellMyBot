@@ -1,4 +1,4 @@
-const roleClaim = require('../handlers/role-claim');
+const roleClaim = require('../../handlers/role-claim');
 module.exports = async bot => {
      console.log(`${bot.user.username} is online`)
      roleClaim(client);
