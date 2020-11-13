@@ -9,7 +9,7 @@ const addReactions = (message, reactions) => {
 module.exports = async (client, id, text, reactions = []) => {
   const channel = await client.channels.get(id)
 
-  channel.messages.fetch().then((messages) => {
+  channel.messages.fetchMessage().then((messages) => {
     if (messages.size === 0) {
       // Send a new message
       channel.send(text).then((message) => {
