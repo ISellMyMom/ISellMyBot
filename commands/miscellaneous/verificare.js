@@ -2,7 +2,7 @@
 const agree = "✅";
 const { channel } = require("../../data/config.json");
 const { welcome } = require("../../data/definedMessages.json");
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     config: {
@@ -14,7 +14,7 @@ module.exports = {
         aliases: [""]
     },
     run: async (bot, message, args) => {
-       let NewBie = new RichEmbed()
+       let NewBie = new MessageEmbed()
       .setAuthor("Welcome", bot.user.avatarURL)
       .setDescription("Bine ai venit pe serverul nostru de discord, pentru a putea accesa celelalte canale trebuie să citeşti regulamentul şi câteva informaţii despre server.")
       .addField("Regulament", "** 1.**  Nu este permisă jignirea directă sau indirectă a unei persoane indiferent de rasă, sex, aspect, națiune, religie, vârstă și tot ce ține de persoana respectivă - __Warn/Mute/Kick/Ban__.\n** 2.**  Nu distribuiți link-uri dăunatoare, reclame fără aprobare sau imagini inadecvate - __Warn/Kick/Ban__.\n** 3.**  Nu este permisă reclama la alt server de discord fără acordul unui administrator - __Ban__.\n** 4.**  Chatul este un loc unde să vă exprimați părerile/concepțiile despre orice, în niciun caz un loc pentru certuri.\n**5.** Este interzis să faceți SPAM, spre exemple:\n- Mesaje scurte şi frecvente.\n- Mesaje cu publicităţi şi link-uri de orice tip.\n- Orice link pus oriunde spre alte servere/site-uri care nu sunt în parteneriat cu noi.")
@@ -64,7 +64,7 @@ module.exports = {
       }
         const filter = (reaction, user) => ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳','❌'].includes(reaction.emoji.name) && user.id === message.author.id;
 
-      const embed = new RichEmbed()
+      const embed = new MessageEmbed()
         .setTitle('Alege domeniul facultatii tale:')
         .addField(`Isorie si Filologie`, `
         A - ${a.toString()}
