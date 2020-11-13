@@ -25,14 +25,15 @@ module.exports = {
       //if(!newbiechannel) return message.channel.send("Canalul pentru începători nu există.");
       let msg1 = await newbiechannel.send(NewBie);
       msg1.react(agree);
-
+        console.log(0);
       const filter = (reaction, user) => {
           return [agree].includes(reaction.emoji.name) && user.id === message.author.id;
+          console.log("1");
       };
-
-      msg1.awaitReactions(filter, { max: 1, time: 120000, errors: ['time'] })
-      .then(collected => {
+        console.log("2")
+      msg1.awaitReactions(filter, { max: 1, time: 120000, errors: ['time'] }).then(collected => {
           const reaction = collected.first();
+          console.log("3");
           if (reaction.emoji.name === agree) {
         msg1.delete();
         const VERIFICAT = message.guild.roles.get('646698118653411329'); // Verificat
