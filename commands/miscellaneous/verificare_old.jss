@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     config: {
-        name: "verificare",
+        name: "verificare_old",
         description: "Verifica daca esti un robot. Beep Boop?",
         usage: "",
         category: "miscellaneous",
