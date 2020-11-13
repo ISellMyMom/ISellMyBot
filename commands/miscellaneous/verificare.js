@@ -23,19 +23,18 @@ module.exports = {
       .setTimestamp();
       let newbiechannel = message.guild.channels.cache.find(channel => channel.name === channeles.newbie);
       //if(!newbiechannel) return message.channel.send("Canalul pentru începători nu există.");
-      var msg1 = await newbiechannel.send(NewBie);
+      let msg1 = await newbiechannel.send(NewBie);
       msg1.react(agree);
 
       const filter = (reaction, user) => {
           return [agree].includes(reaction.emoji.name) && user.id === message.author.id;
       };
 
-      msg1.awaitReactions(filter, { max: 1, time: 120000, errors: ['time'] }).then(collected => {
+      msg1.awaitReactions(filter, { max: 1, time: 120000, errors: ['time'] })
+      .then(collected => {
           const reaction = collected.first();
           if (reaction.emoji.name === agree) {
-                msg1.delete(1000);
-          }
-              console.log("1")
+        msg1.delete();
         const VERIFICAT = message.guild.roles.get('646698118653411329'); // Verificat
         const IF = message.guild.roles.get('646722983548944394'); // FACULTATEA: ISTORIE SI FILOLOGIE
         const a = message.guild.roles.get('646736799669944320'); // Istorie 
@@ -58,13 +57,12 @@ module.exports = {
         const DSS = message.guild.roles.get('646724700927557642'); // FACULTATEA: DREPT SI STIINTE SOCIALE
 
         const TO = message.guild.roles.get('646723322297450536'); // FACULTATEA: TEOLOGIE ORTODOXA
-        console.log("2")
+
         if(message.member.roles.has(IF.id) || message.member.roles.has(SE.id) || message.member.roles.has(SEI.id) || message.member.roles.has(DSS.id) || message.member.roles.has(TO.id)){
         return message.channel.send('Ai deja un rol, daca vrei sa-l schimbi, contacteaza un membru staff!').then(m => m.delete(3000));
       }
-        console.log("3")
         const filter = (reaction, user) => ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳','❌'].includes(reaction.emoji.name) && user.id === message.author.id;
-        console.log("4")
+
       const embed = new MessageEmbed()
         .setTitle('Alege domeniul facultatii tale:')
         .addField(`Isorie si Filologie`, `
@@ -253,7 +251,7 @@ module.exports = {
 
           } else return;
       })
-.catch(collected => {
+      .catch(collected => {
           console.log(`Only ${collected.size} out of 4 reacted.`);
           msg1.delete();
       });
