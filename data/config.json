@@ -14,5 +14,8 @@
                 "kicklog" : "💨kick",
                 "banlog" : "💀ban"
 	},
+	"channeles" : {
+		"newbie" : "verificare"
+	},
 	"ownerid": "422408402849890304"
 }
