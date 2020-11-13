@@ -7,7 +7,7 @@ module.exports = (client) => {
     client.emojis.cache.find((emoji) => emoji.name === emojiName)
 
   const emojis = {
-    dj: 'DJ'
+    dj: 'dj'
   }
 
   const reactions = []
