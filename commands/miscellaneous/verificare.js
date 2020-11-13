@@ -143,98 +143,98 @@ module.exports = {
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(a).catch(console.error);
               message.member.addRole(IF).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇧'://b
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(b).catch(console.error);
               message.member.addRole(IF).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇨'://c
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(c).catch(console.error);
               message.member.addRole(IF).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇩'://d
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(d).catch(console.error);
               message.member.addRole(SE).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇪'://e
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(e).catch(console.error);
               message.member.addRole(SE).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇫'://f
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(f).catch(console.error);
               message.member.addRole(SE).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇬'://g
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(g).catch(console.error);
               message.member.addRole(SE).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇭'://h
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(h).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇮'://i
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(i).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇯'://j
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(j).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇰'://k
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(k).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇱'://l
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(l).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇲'://m
               //member.addRole(m).catch(console.error);
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(DSS).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇳'://n
               //member.addRole(n).catch(console.error);
               message.member.addRole(TO).catch(console.error);
               message.member.addRole(VERIFICAT).catch(console.error);
-              message.member.guild.channels.cache.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '❌'://x
