@@ -1,11 +1,12 @@
+
 const agree = "✅";
-const { channeles } = require("../../data/config.json");
+const { channel } = require("../../data/config.json");
 const { welcome } = require("../../data/definedMessages.json");
-const { MessageEmbed } = require('discord.js');
+const { RichEmbed } = require('discord.js');
 
 module.exports = {
     config: {
-        name: "verificare_old",
+        name: "verificare",
         description: "Verifica daca esti un robot. Beep Boop?",
         usage: "",
         category: "miscellaneous",
@@ -13,7 +14,7 @@ module.exports = {
         aliases: [""]
     },
     run: async (bot, message, args) => {
-       let NewBie = new MessageEmbed()
+       let NewBie = new RichEmbed()
       .setAuthor("Welcome", bot.user.avatarURL)
       .setDescription("Bine ai venit pe serverul nostru de discord, pentru a putea accesa celelalte canale trebuie să citeşti regulamentul şi câteva informaţii despre server.")
       .addField("Regulament", "** 1.**  Nu este permisă jignirea directă sau indirectă a unei persoane indiferent de rasă, sex, aspect, națiune, religie, vârstă și tot ce ține de persoana respectivă - __Warn/Mute/Kick/Ban__.\n** 2.**  Nu distribuiți link-uri dăunatoare, reclame fără aprobare sau imagini inadecvate - __Warn/Kick/Ban__.\n** 3.**  Nu este permisă reclama la alt server de discord fără acordul unui administrator - __Ban__.\n** 4.**  Chatul este un loc unde să vă exprimați părerile/concepțiile despre orice, în niciun caz un loc pentru certuri.\n**5.** Este interzis să faceți SPAM, spre exemple:\n- Mesaje scurte şi frecvente.\n- Mesaje cu publicităţi şi link-uri de orice tip.\n- Orice link pus oriunde spre alte servere/site-uri care nu sunt în parteneriat cu noi.")
@@ -21,7 +22,7 @@ module.exports = {
       .setColor("#1ABC9C")
       .setThumbnail("http://icons.iconarchive.com/icons/graphicloads/polygon/128/problem-2-icon.png")
       .setTimestamp();
-      let newbiechannel = message.guild.channels.cache.find(channel => channel.name === channeles.newbie);
+      let newbiechannel = message.guild.channels.find(`name`, channel.newbie);
       //if(!newbiechannel) return message.channel.send("Canalul pentru începători nu există.");
       let msg1 = await newbiechannel.send(NewBie);
       msg1.react(agree);
@@ -63,7 +64,7 @@ module.exports = {
       }
         const filter = (reaction, user) => ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳','❌'].includes(reaction.emoji.name) && user.id === message.author.id;
 
-      const embed = new MessageEmbed()
+      const embed = new RichEmbed()
         .setTitle('Alege domeniul facultatii tale:')
         .addField(`Isorie si Filologie`, `
         A - ${a.toString()}
@@ -143,98 +144,98 @@ module.exports = {
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(a).catch(console.error);
               message.member.addRole(IF).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇧'://b
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(b).catch(console.error);
               message.member.addRole(IF).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇨'://c
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(c).catch(console.error);
               message.member.addRole(IF).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇩'://d
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(d).catch(console.error);
               message.member.addRole(SE).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇪'://e
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(e).catch(console.error);
               message.member.addRole(SE).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇫'://f
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(f).catch(console.error);
               message.member.addRole(SE).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇬'://g
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(g).catch(console.error);
               message.member.addRole(SE).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇭'://h
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(h).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇮'://i
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(i).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇯'://j
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(j).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇰'://k
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(k).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇱'://l
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(l).catch(console.error);
               message.member.addRole(SEI).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇲'://m
               //member.addRole(m).catch(console.error);
               message.member.addRole(VERIFICAT).catch(console.error);
               message.member.addRole(DSS).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '🇳'://n
               //member.addRole(n).catch(console.error);
               message.member.addRole(TO).catch(console.error);
               message.member.addRole(VERIFICAT).catch(console.error);
-              message.member.guild.channels.cache.find(channel => channel.name === "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
+              message.member.guild.channels.find("name", "👋bun-venit").send(message.member.toString() + " " + WelcomeMessage);
               msg.delete();
               break;
             case '❌'://x
