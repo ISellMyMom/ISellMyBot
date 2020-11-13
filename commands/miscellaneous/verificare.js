@@ -14,6 +14,6 @@ module.exports = {
     },
     run: async (bot, message, args) => {
         message.channel.send("Sistemul de verificare este in mentenanță");
-  
+        message.delete(5000);
     }
 }
