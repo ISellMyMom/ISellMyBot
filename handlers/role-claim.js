@@ -7,12 +7,12 @@ module.exports = (client) => {
 
   const emojis = {
     dj: 'DJ',
-    fermecatorul: 'fermecator',
+
   }
 
   const reactions = []
 
-  let emojiText = '**Reactionează pentru a primi un rol:**\n\n'
+  let emojiText = '**Reacţionează pentru a primi rolul de DJ:**\n**TIMP LIMITAT**\n\n'
   for (const key in emojis) {
     const emoji = getEmoji(key)
     reactions.push(emoji)
