@@ -1,7 +1,6 @@
-const roleClaim = require('../../handlers/role-claim');
+const roleClaim = require('../../handlers/role-claim.js');
 module.exports = async bot => {
      console.log(`${bot.user.username} is online`)
-     roleClaim(bot);
     let statuses = [
         "porn",
         "from bunker",
@@ -14,4 +13,5 @@ module.exports = async bot => {
         bot.user.setActivity(status, {type: "WATCHING"});
 
     }, 5000)
+     roleClaim(bot);
 }
