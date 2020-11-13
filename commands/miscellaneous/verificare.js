@@ -23,7 +23,7 @@ module.exports = {
       .setTimestamp();
       let newbiechannel = message.guild.channels.cache.find(channel => channel.name === channeles.newbie);
       //if(!newbiechannel) return message.channel.send("Canalul pentru începători nu există.");
-      let msg1 = await newbiechannel.send(NewBie);
+      var msg1 = await newbiechannel.send(NewBie);
       msg1.react(agree);
 
       const filter = (reaction, user) => {
@@ -33,7 +33,8 @@ module.exports = {
       msg1.awaitReactions(filter, { max: 1, time: 120000, errors: ['time'] }).then(collected => {
           const reaction = collected.first();
           if (reaction.emoji.name === agree) {
-        msg1.delete();
+                msg1.delete(1000);
+          }
               console.log("1")
         const VERIFICAT = message.guild.roles.get('646698118653411329'); // Verificat
         const IF = message.guild.roles.get('646722983548944394'); // FACULTATEA: ISTORIE SI FILOLOGIE
@@ -252,7 +253,7 @@ module.exports = {
 
           } else return;
       })
-      .catch(collected => {
+.catch(collected => {
           console.log(`Only ${collected.size} out of 4 reacted.`);
           msg1.delete();
       });
