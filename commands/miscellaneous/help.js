@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { RichEmbed } = require("discord.js");
 const { prefix } = require("../../data/config.json");
 const { readdirSync } = require("fs")
 const { stripIndents } = require("common-tags")
@@ -14,7 +14,7 @@ module.exports = {
         accessableby: "Membru"
     },
     run: async (bot, message, args) => {
-        const embed = new MessageEmbed()
+        const embed = new RichEmbed()
             .setColor(cyan)
             .setAuthor(`${message.guild.me.displayName} Help`, message.guild.iconURL)
             .setThumbnail(bot.user.displayAvatarURL)
