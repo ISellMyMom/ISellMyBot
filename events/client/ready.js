@@ -1,8 +1,7 @@
-const { Client } = require('discord.js');
 const roleClaim = require('../../handlers/role-claim');
 module.exports = async bot => {
      console.log(`${bot.user.username} is online`)
-     roleClaim(client);
+     roleClaim(bot);
     let statuses = [
         "porn",
         "from bunker",
