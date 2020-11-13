@@ -1,5 +1,5 @@
 const agree = "✅";
-const { channel } = require("../../data/config.json");
+const { channeles } = require("../../data/config.json");
 const { welcome } = require("../../data/definedMessages.json");
 const { MessageEmbed } = require('discord.js');
 
@@ -21,7 +21,7 @@ module.exports = {
       .setColor("#1ABC9C")
       .setThumbnail("http://icons.iconarchive.com/icons/graphicloads/polygon/128/problem-2-icon.png")
       .setTimestamp();
-      let newbiechannel = message.guild.channels.cache.find(`name`, channel.newbie);
+      let newbiechannel = message.guild.channels.cache.find(channel => channel.name === channeles.newbie);
       //if(!newbiechannel) return message.channel.send("Canalul pentru începători nu există.");
       let msg1 = await newbiechannel.send(NewBie);
       msg1.react(agree);
